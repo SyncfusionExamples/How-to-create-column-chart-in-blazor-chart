@@ -1,14 +1,14 @@
 # How-to-create-column-chart-in-blazor-chart
 
-This article explains how to create a column chart in blazor chart component.
+This article explains how to create a column chart in Blazor Chart Component.
 
-**Creating column chart in blazor chart**
+**Creating column chart in Blazor chart**
 
-[Blazor chart](https://www.syncfusion.com/blazor-components/blazor-charts) has various chart types which includes [Column Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/column-chart) to render a column chart, set the series [Type ](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type)as [Column](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Column).
+[Blazor Chart](https://www.syncfusion.com/blazor-components/blazor-charts) has various chart types which includes [Column Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/column-chart) to render a column chart, set the series [Type ](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type)as [Column](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Column).
 
 The following code example illustrates this.
 
-**C#**
+**Index.razor**
 
 ```cshtml
 
