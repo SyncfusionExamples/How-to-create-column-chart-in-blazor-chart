@@ -1,64 +1,63 @@
-# How-to-create-column-chart-in-blazor-chart
+# How to Create a Column Chart in Blazor Chart
 
-This article explains how to create a column chart in Blazor Chart Component.
+## Overview
 
-**Creating column chart in Blazor chart**
+This sample demonstrates how to create a column chart using Syncfusion [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts). The implementation binds a collection of business data to a chart series and renders it using the column chart visualization type.
 
-[Blazor Chart](https://www.syncfusion.com/blazor-components/blazor-charts) has various chart types which includes [Column Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/column-chart) to render a column chart, set the series [Type ](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type)as [Column](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Column).
+The sample configures a category-based X-axis and maps data fields to chart points through series data binding. Column charts are commonly used to compare values across categories and provide a clear visual representation of trends and differences.
 
-The following code example illustrates this.
+## Key Features
 
-**Index.razor**
+- Uses the `SfChart` component to render chart data.
+- Configures a category axis through `ChartPrimaryXAxis`.
+- Sets `ValueType="ValueType.Category"` for category-based X-axis rendering.
+- Binds chart data using the `ChartSeries.DataSource` property.
+- Maps category values through the `XName` property.
+- Maps numeric values through the `YName` property.
+- Renders a column chart using `Type="ChartSeriesType.Column"`.
+- Displays chart data from a strongly typed `ChartData` collection.
 
-```cshtml
+## Prerequisites
 
-@using Syncfusion.Blazor.Charts
+- [Visual Studio 2022](https://visualstudio.microsoft.com/vs/) or [Visual Studio Code](https://code.visualstudio.com/)
+- [.NET SDK](https://dotnet.microsoft.com/en-us/download/dotnet) compatible with the project's target framework
 
-<SfChart Title="Sales History of Product X">
+## How to Run the Project
 
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+**Visual Studio 2022**
 
-    <ChartSeriesCollection>
-        <ChartSeries DataSource="@SalesReports" XName="X" YName="YValue" Type="ChartSeriesType.Column"></ChartSeries>
-    </ChartSeriesCollection>
+1. Clone this repository.
+2. Open the project file:
+   - `Column.csproj`
+3. Restore NuGet packages when prompted.
+4. Build the project.
+5. Run the application using **Ctrl+F5**.
 
-</SfChart>
+**Visual Studio Code**
 
-@code {
+1. Clone this repository.
+2. Open the repository folder in Visual Studio Code.
+3. Open the integrated terminal.
+4. Navigate to the project directory.
 
-    public class ChartData
-    {
-        public string X { get; set; }
-        public double YValue { get; set; }
-    }
-
-    public List<ChartData> SalesReports = new List<ChartData>
-    {
-        new ChartData { X= "USA", YValue= 20 },
-        new ChartData { X= "GBR", YValue= 27 },
-        new ChartData { X= "CHN", YValue= 26 },
-        new ChartData { X= "UK", YValue= 40 },
-        new ChartData { X= "AUS", YValue= 26 },
-        new ChartData { X= "IND", YValue= 10 },
-        new ChartData { X= "DEN", YValue= 26 },
-        new ChartData { X= "MEX", YValue= 35 },
-    };
-}
-
+```bash
+cd Column
+dotnet restore
+dotnet run
 ```
 
-The following image screenshot illustrates the output of the above code snippet.
+5. Open the local URL displayed in the terminal after the application starts.
 
-**Output:**
+## Project Structure
 
-![](/column.png)
+`Pages/Index.razor` - Main sample page that configures and renders the Syncfusion Blazor column chart.
 
-**Conclusion**
+## Support and Feedback
 
-I hope you enjoyed learning how to create column chart in Blazor Chart Component.
+- For general product questions, visit the [Syncfusion Community Forum](https://www.syncfusion.com/forums) or [Syncfusion Support](https://www.syncfusion.com/support).
+- To report an issue specific to this sample, open a GitHub issue in this repository.
+- Refer to the official documentation: https://help.syncfusion.com/chart-sdk/blazor/charts/getting-started
 
-You can refer to our [Blazor Chart feature tour](https://www.syncfusion.com/blazor-components/blazor-charts) page to know about its other groundbreaking feature representations and [documentation](https://blazor.syncfusion.com/documentation/chart/getting-started), and how to quickly get started for configuration specifications. You can also explore our [Blazor Chart example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to understand how to create and manipulate data.
+## License
 
-For current customers, you can check out our components from the [License and Downloads](https://www.syncfusion.com/sales/teamlicense) page. If you are new to Syncfusion, you can try our 30-day [free trial](https://www.syncfusion.com/downloads/blazor) to check out our other controls.
-
-If you have any queries or require clarifications, please let us know in the comments section below. You can also contact us through our [support forums](https://www.syncfusion.com/forums), [support portal](https://support.syncfusion.com/create), or [feedback portal](https://www.syncfusion.com/feedback/blazor-components?control=charts). We are always happy to assist you!
+This is a Syncfusion sample project provided to demonstrate product usage. Review the [Syncfusion license terms](https://www.syncfusion.com/sales/pricing?category=ui-components) before using Syncfusion components in your own applications.
